@@ -173,7 +173,7 @@ InsteonAccessory.prototype.sendCommand = function(deviceid, command, level, call
 					'Authentication': self.apikey},
 			url: '/commands/' + id
 			},function (error, response, body) {
-				console.log('SSKparsing [%s] ' + JSON.stringify(body),moment().format('YYYYMMDDHHmmss.SSS'));
+				console.log('Parsing response [%s] ' + JSON.stringify(body),moment().format('YYYYMMDDHHmmss.SSS'));
 				if(JSON.stringify(body.status) == 'failed') {
 					callback(error, null);
 				}
@@ -270,7 +270,6 @@ function InsteonAccessory(platform, device) {
 					
 			var level = parseInt(JSON.stringify(body.response.level),10);
 			self.level = level;
-			console.log('SSKFinal: ' + JSON.stringify(body) + ' Level: ' + level);
 			
 			 if(level > 0) {
 				self.currentState = true;
