@@ -1,0 +1,13 @@
+{
+    "bridge": {},
+    "description": "",
+    "platforms": [
+        {
+	  "platform": "Insteon",
+          "name": "Insteon Platform",
+	  "user": "user@example.com",
+	  "pass": "passw0rd",
+	  "client_id": "client_id"
+	}
+    ]
+}
